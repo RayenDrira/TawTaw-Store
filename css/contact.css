@@ -1,0 +1,42 @@
+.contact {
+  margin-top: 5em;
+}
+.contact .container {
+  border: 2px solid #444;
+  border-radius: 20px;
+  width: 37em;
+  height: 27.5em;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+.contact div {
+  display: flex;
+  gap: 1em;
+}
+.contact input {
+  width: 20em;
+  height: 3em;
+}
+.contact textarea {
+  width: 93.4%;
+  height: 23em;
+}
+.contact input,
+.contact textarea {
+  background-color: transparent;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 1em;
+  color: white;
+}
+.contact .button-holder {
+  justify-content: center;
+  margin-top: 1.5em;
+}
+.contact .btx-red {
+  width: 15em;
+  height: 3em;
+  border-radius: 15px;
+}

@@ -1,0 +1,137 @@
+.items {
+  margin-top: 5em;
+}
+.items .container {
+  justify-content: center;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+.product-image {
+  width: 15.9em;
+  height: 14.1em;
+  background-color: white;
+  border-radius: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-image img {
+  width: 12.5em;
+  height: 12em;
+}
+.cart-details,
+.cart-options,
+.middle-card,
+.right-card {
+  padding: 1em;
+  border-radius: 20px;
+  border: 2px solid #191a1c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart-details,
+.middle-card {
+  width: 27em;
+  height: 13.8em;
+}
+.cart-options,
+.right-card {
+  width: 10.3em;
+  height: 13.8em;
+  padding-top: 1.4em;
+}
+.cart-details h3,
+.middle-card h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+.cart-options h3,
+.right-card h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+.cart-details-details {
+  padding: 0.15em 0;
+}
+.cart-details #stock {
+  color: #31c1e1;
+  font-weight: 600;
+}
+/*8alta*/
+.items span {
+  font-weight: 700;
+}
+
+.cart-options input {
+  background-color: transparent;
+  border: 2px solid #31c1e1;
+  border-radius: 20px;
+  height: 2.67em;
+  width: 100%;
+  margin-bottom: 0.5em;
+  color: white;
+  text-align: center;
+}
+.cart-options .btx-red-reverse,
+.right-card .btx-red-reverse,
+.cart-options .btx-blue {
+  width: 100%;
+}
+.cart-details .btx-red-reverse {
+  width: 11em;
+}
+.cart-details .btx-blue,
+.right-card .btx-blue {
+  width: 11em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.cart-options .btx-blue,
+.right-card .btx-blue {
+  margin-bottom: 0.5em;
+  width: 100%;
+  padding: 0 0.5em;
+}
+#cart-buttons {
+  margin-top: 2em;
+  gap: 1em;
+}
+#cart-buttons button {
+  width: 17em;
+  height: 3.5em;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.right-card {
+  text-align: center;
+}
+.right-card h3 {
+  padding-bottom: 0.5em;
+}
+.right-card p {
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: #c3c3c3;
+  font-size: 1.1em;
+}
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2em;
+}
+.rating p {
+  color: #ff2330;
+  padding-left: 0.5em;
+}
+.middle-card .btx-red {
+  width: 9.4em;
+}

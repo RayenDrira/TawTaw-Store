@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  font-family: Outfit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/*header*/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.1em 6em;
+  background-color: #191b1c;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header span {
+  display: flex;
+  align-items: center;
+}
+header a {
+  margin: 0 2em;
+  font-size: 1.1em;
+}
+header a:hover {
+  color: #ff2330;
+  transition: 0.8s;
+}
+header button {
+  margin: 0 1em 0 0;
+}
+#on {
+  gap: 1.7em;
+}
+header #on button {
+  margin: 0;
+}
+header h1 {
+  margin-right: 2em;
+  font-size: 1.8em;
+  background: linear-gradient(94deg, #ff2330 1.39%, #31c1e1 75.32%);
+  background-clip: text;
+  color: hsla(0, 0%, 0%, 0);
+}
+/* hero */
+
+.Hero {
+  height: 100vh;
+  position: relative;
+}
+.Hero .hero-image {
+  top: 0;
+  position: absolute;
+  background-image: url("../Images/Background/Glowing-pc-fg.png");
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90%;
+  z-index: -1;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6em;
+  padding-left: 6em;
+  padding-top: 8%;
+}
+.Hero h2 {
+  font-size: 3.33em;
+}
+.Hero p {
+  max-width: 340px;
+  font-size: 1.1em;
+}
+.hero-content > div {
+  display: flex;
+  gap: 1em;
+}
+/*why */
+
+.today,
+.trending,
+.gaming,
+.why {
+  margin-top: 6em;
+  z-index: 100;
+  height: 100vh;
+}
+.why {
+  height: 80vh;
+}
+.section {
+  font-size: 3.4375em;
+  text-align: center;
+}
+.section > span {
+  color: #ff2330;
+}
+hr {
+  width: 4em;
+  margin: 1em auto 2em;
+  border: solid 3px #ff2330;
+  border-radius: 1px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 6em;
+}
+.why-card {
+  width: 21.5em;
+  height: 14.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #31c1e1;
+  border-radius: 20px;
+  padding: 0 0.9em;
+  margin-top: 2em;
+}
+.why img {
+  width: 4.375em;
+  height: 4.375em;
+}
+.why h3 {
+  font-size: 2em;
+}
+.why p {
+  font-size: 1.1em;
+  text-align: center;
+}
+/* today */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #191b1c;
+  height: 27.625em;
+  width: 21.375em;
+  margin-bottom: 2em;
+}
+.product-card img {
+  height: 13.88em;
+  width: auto;
+  align-self: center;
+}
+.product-card h3 {
+  font-size: 1.2em;
+  text-align: center;
+}
+.product-card p {
+  font-size: 1em;
+  text-align: justify;
+}
+.product-card .price {
+  font-weight: bold;
+}
+.product-card .promo {
+  color: #ff2332c9;
+  font-weight: bold;
+  text-decoration: line-through #ff2330;
+  font-size: 1.111em;
+}
+.product-card-summary {
+  border-radius: 20px;
+  background-color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.7em;
+  padding: 1.5em;
+  height: 13.5329375em;
+}
+.button-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* button position */
+.today .btx-red,
+.trending .btx-red,
+.gaming .btx-red {
+  display: block;
+  margin: auto;
+}
+/* footer */
+
+footer {
+  background-color: #191b1c;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em 0;
+  height: 45vh;
+  margin-top: 4em;
+}
+footer h4 {
+  font-size: 1.25em;
+  text-transform: capitalize;
+  padding-bottom: 0.5em;
+}
+footer a {
+  font-weight: 600;
+}
+footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+footer .gap-footer {
+  gap: 1.5em;
+}
+footer img {
+  width: 29px;
+  height: 29px;
+}
+footer div div {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}

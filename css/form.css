@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  font-family: Outfit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background-image: url("../Images/Background/Rainbow.png");
+  background-size: cover;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: #c3c3c3;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 1em 0;
+}
+footer {
+  padding: 2em 0;
+  gap: 2em;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+header h1 {
+  background: linear-gradient(94deg, #ff2330 1.39%, #31c1e1 75.32%);
+  background-clip: text;
+  color: hsla(0, 0%, 0%, 0);
+}
+
+.line {
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(
+    94deg,
+    rgba(49, 193, 225, 0) 0%,
+    #ff2330 22%,
+    #31c1e1 75.32%,
+    rgba(49, 193, 225, 0) 100%
+  );
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 6em;
+}
+.glassy-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  border-radius: 20px;
+  border: 2px solid #ff2330;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 1.5em 1.875em;
+  width: 27.125em;
+}
+.glassy-card form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1em;
+}
+.glassy-card input {
+  height: 3.6em;
+  background-color: transparent;
+  padding: 1em;
+  border: 2px solid #31c1e1;
+  border-radius: 10px;
+}
+.or {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.or hr {
+  width: 10em;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+}
+p span {
+  color: #ff2330;
+}
+#new {
+  display: flex;
+  justify-content: center;
+}
+#success {
+  align-items: center;
+  gap: 1.5em;
+  margin: 4.11em 0;
+}
+#welcome {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.33em;
+}
+#success .btx-blue-reverse {
+  width: 100%;
+}
