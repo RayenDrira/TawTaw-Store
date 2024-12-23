@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\contact.css">
     <link rel="stylesheet" href="..\css\button.css">
+    <link rel="stylesheet" href="..\css\pay.css">
+
     <title>TawTaw\home-l</title>
 </head>
 
@@ -44,21 +45,39 @@
             </span>
         </nav>
     </header>
-    <div class="contact">
-        <h1 class="section"><span>Contact </span> our team <span>!</span></h1>
-        <hr class="hr">
-        <form class="container">
-            <div>
-                <input type="text" placeholder="First-Name">
-                <input type="text" placeholder="Last-Name">
+    <div class="container" id="check">
+        <form class="glassy-card">
+            <h1>Check Out Form</h1>
+            <div class="container">
+                <div class="input-holder">
+                    <h3>Fill Out Your Information </h3>
+                    <input type="text" placeholder="First Name">
+                    <input type="text" placeholder="Last Name">
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="Ville">
+                    <input type="number" placeholder="Telephone Number">
+                </div>
+                <hr>
+                <div class="input-holder">
+                    <h3>Order Confirmation</h3>
+                    <p>Number of items : <span>3</span></p>
+                    <p>SumTotal : <span>5270.900 TND</span></p>
+                    <hr>
+                    <h3>Choose mode of payment</h3>
+                    <div><input type="radio" value="Paypal" name="mode-of-payment" id="Paypal">
+                        <label for="Paypal">Paypal</label>
+                    </div>
+                    <div><input type="radio" value="Bank Card" name="mode-of-payment" id="Bank">
+                        <label for="Bank">Bank card</label>
+                    </div>
+                    <button class="btx-grey">See Items</button>
+                </div>
             </div>
-            <div>
-                <input type="email" placeholder="Email.address@domaine.com">
-                <input type="number" placeholder="Phone Number">
+            <div class="button-holder">
+                <button class="btx-red">Next</button>
+                <button class="btx-blue-reverse">Return</button>
             </div>
-            <textarea placeholder="Leave us a message.."></textarea>
         </form>
-        <div class="button-holder"><button class="btx-red">Send</button></div>
     </div>
     <footer>
         <div>

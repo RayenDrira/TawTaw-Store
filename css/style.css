@@ -117,7 +117,7 @@ header h1 {
 .section > span {
   color: #ff2330;
 }
-hr {
+.hr {
   width: 4em;
   margin: 1em auto 2em;
   border: solid 3px #ff2330;
