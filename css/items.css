@@ -247,7 +247,8 @@
 .main-card #hr {
   border: #191a1c 1.5px solid;
 }
-.main-card select {
+.main-card select,
+#shop .right-shop select {
   border: #31c1e1 2px solid;
   border-radius: 1em;
   padding: 0.5em;
@@ -352,4 +353,110 @@
 .Review .container {
   flex-direction: column;
   gap: 1em;
+}
+/*shop search bar*/
+#search-section {
+  padding: 4em 0;
+  justify-content: center;
+  gap: 1em;
+}
+#search-section .container {
+  margin: 0;
+}
+.grey {
+  color: #c3c3c3;
+  text-align: left;
+  font-size: 1.5em;
+}
+.search {
+  border: #4e4e4e 3px solid;
+  border-radius: 0.7em;
+  height: 2.6em;
+  width: 50em;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.icon-holder {
+  height: 2.17em;
+  width: 2.3em;
+  border: #4e4e4e 3px solid;
+  border-left: #191a1c 0px solid;
+  border-radius: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#search-section input {
+  background-color: black;
+}
+/*shop title */
+#shop {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0 6.35em;
+}
+#shop .container {
+  justify-content: space-between;
+  gap: 1em;
+  align-items: flex-start;
+}
+#shop #right-shop-title,
+#shop .left-shop {
+  display: flex;
+  justify-content: space-between;
+  border: #191a1c 3px solid;
+  border-radius: 1.1em;
+  padding: 0.5em 1em;
+  align-items: center;
+}
+#shop #right-shop-title,
+#shop #left-shop-title {
+  height: 3.8em;
+}
+#shop .right-shop {
+  width: 63.5em;
+}
+#shop .left-shop {
+  width: 17em;
+}
+#shop .right-shop select {
+  width: 11em;
+}
+#shop .grey {
+  font-size: 1.1em;
+}
+#right-shop-details {
+  margin: 0;
+}
+#shop .items-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 63.5em;
+}
+#shop .items-holder .container {
+  margin: 0;
+  gap: 0.5em;
+}
+#shop hr {
+  width: 12em;
+  border: #4e4e4e 1px solid;
+  margin: 1em 0;
+}
+.categorie h3 {
+  font-size: 1.4em;
+  padding-bottom: 0.5em;
+}
+#shop .categorie .container {
+  flex-direction: column;
+  margin: 0;
+  align-items: flex-start;
+  gap: 0.5em;
+}
+
+#shop .button-holder {
+  gap: 0.5em;
 }
