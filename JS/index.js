@@ -4,7 +4,7 @@ function navigateToPage(pageName) {
     case "favourates":
       window.location.href = "favourates.html";
       break;
-    case "shop":
+    case "Shop":
       window.location.href = "shop.html";
       break;
     case "contact":
@@ -19,6 +19,18 @@ function navigateToPage(pageName) {
     case "buy":
       window.location.href = "pay.html";
       break;
+    case "s-pay":
+      window.location.href = "s-pay.html";
+      break;
+    case "signup":
+      window.location.href = "signup.html";
+      break;
+    case "login":
+      window.location.href = "login.html";
+      break;
+    case "s-index":
+      window.location.href = "login.html";
+      break;
     default:
       console.error("Page not found");
   }
@@ -26,9 +38,19 @@ function navigateToPage(pageName) {
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("button").forEach((button) => {
     if (
-      ["favourates", "shop", "contact", "cart", "product", "buy"].includes(
-        button.id
-      )
+      [
+        "favourates",
+        "Shop",
+        "contact",
+        "cart",
+        "product",
+        "buy",
+        "s-pay",
+        "signup",
+        "login",
+        "s-login",
+        "s-index",
+      ].includes(button.id)
     ) {
       button.addEventListener("click", function () {
         navigateToPage(button.id);
