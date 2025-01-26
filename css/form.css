@@ -83,6 +83,7 @@ header h1 {
   padding: 1em;
   border: 2px solid #31c1e1;
   border-radius: 10px;
+  color: white;
 }
 .or {
   display: flex;
