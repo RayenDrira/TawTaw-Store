@@ -409,7 +409,7 @@
   justify-content: space-between;
   border: #191a1c 3px solid;
   border-radius: 1.1em;
-  padding: 0.5em 1em;
+  padding: 1em 1em;
   align-items: center;
 }
 #shop #right-shop-title,
@@ -442,9 +442,14 @@
   gap: 0.5em;
 }
 #shop hr {
-  width: 12em;
   border: #4e4e4e 1px solid;
-  margin: 1em 0;
+  margin: 1em 0 0 0;
+}
+.categorie {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 100%;
 }
 .categorie h3 {
   font-size: 1.4em;
@@ -459,4 +464,27 @@
 
 #shop .button-holder {
   gap: 0.5em;
+}
+#shop #left-shop {
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 1.5em;
+}
+/* section slider*/
+.min,
+.max {
+  width: 5em;
+  background-color: black;
+  color: white;
+  border: #31c1e1 2px solid;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 0.5em 0.3em;
+  font-size: 1em;
+}
+/*romove arrows in number input*/
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
