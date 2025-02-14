@@ -245,3 +245,7 @@ footer div div {
   align-items: center;
   gap: 2em;
 }
+.arrow-left,
+.arrow-right {
+  cursor: pointer;
+}

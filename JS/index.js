@@ -58,3 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+/* Function to toggle heart icon */
+function toggleHeart(element) {
+  const currentSrc = element.getAttribute("src"); // Get the full image path
+
+  // Define the full paths for the images
+  const filledHeart = "../Images/Icons/heart.svg";
+  const outlineHeart = "../Images/Icons/heart_on.svg";
+
+  // Toggle between the two images
+
+  if (currentSrc.includes("heart_on")) {
+    element.setAttribute("src", filledHeart);
+  } else {
+    element.setAttribute("src", outlineHeart);
+  }
+}
