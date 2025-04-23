@@ -11,10 +11,13 @@ body {
   background-color: black;
   color: white;
 }
-
+/* general */
 a {
   text-decoration: none;
   color: white;
+  cursor: pointer;
+}
+.pointer {
   cursor: pointer;
 }
 

@@ -30,6 +30,7 @@
   border-radius: 8px;
   padding: 1em;
   color: white;
+  transition: all 0.3s ease;
 }
 .contact .button-holder {
   justify-content: center;
@@ -39,4 +40,12 @@
   width: 15em;
   height: 3em;
   border-radius: 15px;
+}
+/* input animations */
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #31c1e1;
+  outline: none; /* Optional: remove the default outline */
+  transition: border-color 0.3s ease-in-out; /* Optional: smooth transition */
+  box-shadow: 0 0 8px rgba(49, 193, 225, 0.5);
 }
