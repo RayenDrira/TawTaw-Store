@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +8,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\contact.css">
     <link rel="stylesheet" href="..\css\button.css">
-    <title>TawTaw\home-l</title>
+    <title>TawTaw\home</title>
 </head>
 
 <body>
@@ -46,27 +48,87 @@
             </span>
         </nav>
     </header>
-    <div class="contact">
-        <h1 class="section"><span>Contact </span> our team <span>!</span></h1>
-        <hr class="hr">
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="ae80fd77-91dc-45f7-9f55-5474379144ac">
-            <div class="container">
-                <div>
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="Email.address@domain.com" required>
-                    <input type="number" name="phone" placeholder="Phone Number" required>
-                </div>
-                <textarea name="message" placeholder="Leave us a message.." required></textarea>
+    <div class="Hero">
+        <div class="hero-content">
+            <h2>TawTaw Store</h2>
+            <p>The most secure marketplace for buying unique and top-tier products</p>
+            <div><button class="btx-red" id="Shop">Shop now</button>
+                <button class="btx-blue" id="contact">Contact</button>
             </div>
-            <div class="button-holder">
-                <button class="btx-red" type="submit">Send</button>
-            </div>
-        </form>
+        </div>
+        <div class="hero-image">
+        </div>
     </div>
+    <div class="why">
+        <h2 class="section"><span>Why</span> shop with us <span>?</span></h2>
+        <hr class="hr">
+        <div class="container">
+            <div class="why-card">
+                <img src="..\Images\Icons\fast-delivery.png" alt="van icon">
+                <h3>Fast delivery</h3>
+                <p>swift delivery for your immediate satisfaction</p>
+            </div>
+            <div class="why-card">
+                <img src="..\Images\Icons\free.png" alt="coin icon that says free">
+                <h3>Free shipping</h3>
+                <p>enjoy cost free shipping on all orders</p>
+            </div>
+            <div class="why-card">
+                <img src="..\Images\Icons\Medal.png" alt="achievement icon">
+                <h3>Best Quality</h3>
+                <p>top-tier quality you can always trust</p>
+            </div>
+        </div>
+    </div>
+    <div class="today">
+        <h2 class="section"><span>Today</span>'s Deals <span>!</span></h2>
+        <hr class="hr">
+        <div class="container">
+            <div class="arrow-left arrow" id="#product-carousel-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" transform="rotate(180 0 0)"
+                    viewBox="0 0 1024 1024">
+                    <path fill="#FF2330"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                </svg>
+            </div>
+            <div class="product-wrapper" id="product-wrapper">
+                <?php include '../php/product-cards.php'; ?>
+            </div>
+            <div class="arrow-right arrow" id="#product-carousel-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" viewBox="0 0 1024 1024">
+                    <path fill="#FF2330"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                </svg>
+            </div>
+        </div>
+        <button class="btx-red" id="Shop">See More</button>
+    </div>
+    <div class="trending">
+        <h2 class="section">laptops <span>!</span></h2>
+        <hr class="hr">
+        <div class="container">
+            <div class="arrow-left arrow" id="#product-carousel-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" transform="rotate(180 0 0)"
+                    viewBox="0 0 1024 1024">
+                    <path fill="#FF2330"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                </svg>
+            </div>
+            <div class="product-wrapper" id="product-wrapper">
+                <?php
+                $category = 'laptop';
+                include '../php/product-cards.php'; ?>
+            </div>
+            <div class="arrow-right arrow" id="#product-carousel-right">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3.5em" height="3.5em" viewBox="0 0 1024 1024">
+                    <path fill="#FF2330"
+                        d="M338.752 104.704a64 64 0 0 0 0 90.496l316.8 316.8l-316.8 316.8a64 64 0 0 0 90.496 90.496l362.048-362.048a64 64 0 0 0 0-90.496L429.248 104.704a64 64 0 0 0-90.496 0" />
+                </svg>
+            </div>
+        </div>
+        <button class="btx-red" id="Shop">See More</button>
+    </div>
+
     <footer>
         <div>
             <h4>you can find us on</h4>
@@ -101,8 +163,41 @@
             <a href="shop.php?category=Smarttv">Smart tv</a>
         </div>
     </footer>
-    <script src="../JS/index.js"></script>
+    <script>
+        //script to manage cart
+        function addToCart(variationId) {
+         
+            const isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+            if (!isLoggedIn) {
+                alert('You must be logged in to add items to the cart.');
+                return;
+            }
+
+            // Send the AJAX request
+            fetch('../php/add-to-cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ variation_id: variationId }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Item added to cart successfully!');
+                    } else {
+                        alert('Failed to add item to cart: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+    </script>
     <script src="../JS/logout.js"></script>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/courousel.js"></script>
 
 
 </body>

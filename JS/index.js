@@ -2,19 +2,16 @@
 function navigateToPage(pageName) {
   switch (pageName) {
     case "favourates":
-      window.location.href = "favourates.html";
+      window.location.href = "favourates.php";
       break;
     case "Shop":
-      window.location.href = "shop.html";
+      window.location.href = "shop.php";
       break;
     case "contact":
       window.location.href = "contact.html";
       break;
     case "cart":
-      window.location.href = "cart.html";
-      break;
-    case "product":
-      window.location.href = "product.html";
+      window.location.href = "cart.php";
       break;
     case "buy":
       window.location.href = "pay.html";
@@ -23,13 +20,13 @@ function navigateToPage(pageName) {
       window.location.href = "s-pay.html";
       break;
     case "signup":
-      window.location.href = "signup.html";
+      window.location.href = "signup.php";
       break;
     case "login":
-      window.location.href = "login.html";
+      window.location.href = "login.php";
       break;
     case "s-index":
-      window.location.href = "login.html";
+      window.location.href = "s-index.php";
       break;
     default:
       console.error("Page not found");
@@ -43,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "Shop",
         "contact",
         "cart",
-        "product",
         "buy",
         "s-pay",
         "signup",
@@ -60,13 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 /* Function to toggle heart icon */
 function toggleHeart(element) {
-  const currentSrc = element.getAttribute("src"); // Get the full image path
+  const currentSrc = element.getAttribute("src");
 
-  // Define the full paths for the images
   const filledHeart = "../Images/Icons/heart.svg";
   const outlineHeart = "../Images/Icons/heart_on.svg";
-
-  // Toggle between the two images
 
   if (currentSrc.includes("heart_on")) {
     element.setAttribute("src", filledHeart);

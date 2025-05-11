@@ -13,6 +13,9 @@ html {
   border: none;
   cursor: pointer;
 }
+.btx-add:hover {
+  transform: scale(1.05);
+}
 .btx-red {
   padding: 5px 41px;
   font-weight: 400;
@@ -22,6 +25,17 @@ html {
   color: white;
   background-color: #ff2330;
   border: 2px solid #ff2330;
+  cursor: pointer;
+}
+.btx-blue-reverse {
+  padding: 5px 41px;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  border-radius: 20px;
+  color: white;
+  background-color: #31c1e1;
+  border: 2px solid #31c1e1;
   cursor: pointer;
 }
 .btx-blue {

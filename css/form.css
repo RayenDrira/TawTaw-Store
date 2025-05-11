@@ -118,3 +118,9 @@ p span {
 #success .btx-blue-reverse {
   width: 100%;
 }
+.glassy-card input:focus {
+  border-color: #31c1e1;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  box-shadow: 0 0 8px rgba(49, 193, 225, 0.5);
+}

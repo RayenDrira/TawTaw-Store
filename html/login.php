@@ -1,4 +1,6 @@
-<?php require '..\php\connexion.php'; ?>
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\css\form.css">
     <link rel="stylesheet" href="..\css\button.css">
-    <title>TawTaw\signup</title>
+    <script src="..\JS\control-login.js"></script>
+    <title>TawTaw\login</title>
 </head>
 
 <body>
@@ -17,20 +20,20 @@
     </header>
     <div class="container">
         <div class="glassy-card">
-            <h1>Sign up</h1>
+            <h1>Log in</h1>
             <p>Empowering the Future with Technology</p>
-            <form method="POST" action="..\php\base-signup.php">
-                <input type="email" name="email" placeholder="Email or Phone">
+            <form method="POST" action="../php/verify-login.php">
+                <input type="email" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
-                <input type="password" name="confirm_password" placeholder="Confirm Password">
-                <button type="submit" class="btx-red">Sign up</button>
+                <a href="">forgot password</a>
+                <button type="submit" class="btx-red">Sign in</button>
                 <div class="or">
-                    <hr>Or
+                    <hr>
+                    Or
                     <hr>
                 </div>
                 <button class="btx-blue-reverse"><img src="">Sign in with google</button>
-                <p id="new">Have An Account &nbsp; <a href="login.php"><span>Log In</span></a>
-                </p>
+                <p id="new">New to TawTaw &nbsp; <a href="signup.php"><span>Join Now!</span></a></p>
             </form>
         </div>
     </div>
@@ -39,6 +42,5 @@
         <p>© 2025 [TawTaw Store]. All rights reserved."</p>
     </footer>
 </body>
-<script src="..\JS\control-signup.js"></script>
+
 </html>
-<?php $conn->close(); ?>

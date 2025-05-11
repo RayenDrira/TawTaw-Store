@@ -90,11 +90,13 @@ header h1 {
   padding-top: 8%;
 }
 .Hero h2 {
-  font-size: 3.33em;
+  font-size: 3.3em;
 }
 .Hero p {
   max-width: 340px;
-  font-size: 1.1em;
+  font-size: 1.3em;
+  text-align: justify;
+  padding-left: 0.1em;
 }
 .hero-content > div {
   display: flex;
@@ -132,6 +134,12 @@ header h1 {
   align-items: center;
   margin: 0 6em;
 }
+.product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.6em;
+}
 .why-card {
   width: 21.5em;
   height: 14.75em;
@@ -144,6 +152,11 @@ header h1 {
   border-radius: 20px;
   padding: 0 0.9em;
   margin-top: 2em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.why-card:hover {
+  transform: translateY(-10px) scale(1.05); /* Move up slightly and scale up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
 }
 .why img {
   width: 4.375em;
@@ -213,6 +226,9 @@ header h1 {
   display: block;
   margin: auto;
 }
+.trending {
+  margin-bottom: 6em;
+}
 /* footer */
 
 footer {
@@ -250,5 +266,14 @@ footer div div {
 }
 .arrow-left,
 .arrow-right {
+  cursor: pointer;
+}
+
+
+
+
+/* logout sytling */
+
+.profile-logo{
   cursor: pointer;
 }

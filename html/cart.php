@@ -1,3 +1,6 @@
+<?php
+session_start(); // Start the session at the very beginning 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="..\css\style.css">
-    <link rel="stylesheet" href="..\css\contact.css">
+    <link rel="stylesheet" href="..\css\items.css">
     <link rel="stylesheet" href="..\css\button.css">
     <title>TawTaw\home-l</title>
 </head>
@@ -46,26 +49,19 @@
             </span>
         </nav>
     </header>
-    <div class="contact">
-        <h1 class="section"><span>Contact </span> our team <span>!</span></h1>
+    <div class="items">
+        <h2 class="section"><span>Items &nbsp;</span>in the cart</h2>
         <hr class="hr">
-        <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="ae80fd77-91dc-45f7-9f55-5474379144ac">
-            <div class="container">
-                <div>
-                    <input type="text" name="first_name" placeholder="First Name" required>
-                    <input type="text" name="last_name" placeholder="Last Name" required>
-                </div>
-                <div>
-                    <input type="email" name="email" placeholder="Email.address@domain.com" required>
-                    <input type="number" name="phone" placeholder="Phone Number" required>
-                </div>
-                <textarea name="message" placeholder="Leave us a message.." required></textarea>
+        <?php
+        include '../php/cart-products.php';
+        ?>
+        <div class="container">
+            <div class="button-holder" id="cart-buttons">
+                <button class="btx-blue">( 3 items ) : 5270.900 TND</button>
+                <button class="btx-red" id="buy">Check out</button>
             </div>
-            <div class="button-holder">
-                <button class="btx-red" type="submit">Send</button>
-            </div>
-        </form>
+        </div>
+
     </div>
     <footer>
         <div>
@@ -101,10 +97,80 @@
             <a href="shop.php?category=Smarttv">Smart tv</a>
         </div>
     </footer>
-    <script src="../JS/index.js"></script>
+    <script src="..\JS\index.js"></script>
+    <script>
+        //script to manage favs
+        function toggleFavourite(element, variationId) {
+         
+            const isLoggedIn = <?php echo isset($_SESSION['user_id']) ? 'true' : 'false'; ?>;
+            if (!isLoggedIn) {
+                alert('You must be logged in to manage favourites.');
+                return;
+            }
+
+            const isFavourite = element.getAttribute('data-favourite') === 'true';
+
+            // Send the AJAX request
+            fetch('../php/toggle-favourite.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    variation_id: variationId,
+                    action: isFavourite ? 'remove' : 'add'
+                }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        element.src = isFavourite
+                            ? '../Images/Icons/heart.svg'
+                            : '../Images/Icons/heart_on.svg';
+                        element.setAttribute('data-favourite', isFavourite ? 'false' : 'true');
+                        alert(data.message);
+                    } else {
+                        alert('Failed to update favourites: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+    </script>
+    <script>
+        function deleteFromCart(variationId) {
+
+            if (!confirm('Are you sure you want to remove this item from the cart?')) {
+                return;
+            }
+
+            // Send the AJAX request
+            fetch('../php/delete-from-cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ variation_id: variationId }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Item removed from cart successfully!');
+                        location.reload();
+                    } else {
+                        alert('Failed to remove item from cart: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+        }
+    </script>
     <script src="../JS/logout.js"></script>
-
-
+    <script src="../JS/index.js"></script>
 </body>
 
 </html>
