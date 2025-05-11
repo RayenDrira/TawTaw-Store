@@ -40,6 +40,6 @@ tawtaw-store/
 ## 👨‍💻 Author
 
 **Rayen Drira**  
-Computer Engineering Student | IoT Enthusiast  
+Computer Engineering Student | Exploring IoT & Cybersecurity | Scout Leader 🏕️ 
 [GitHub Profile](https://github.com/RayenDrira)
 
